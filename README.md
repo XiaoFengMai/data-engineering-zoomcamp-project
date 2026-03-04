@@ -23,9 +23,11 @@ Large cities like New York receive many service requests through the 311 system.
 With more and more people moving to New York City, more complaint reports and raw data of those reports there is to clean. City agencies must monitor complaint volumes, allocate resources efficiently, monitor rising urban issues, and improve response times. Hundreds of 311 service requests are generated daily and we need a system that transforms this public data into clear, decision-ready insights for the people of New York City. The goal is to move from, New Yorkers are complaining more lately about this issue, to, Noise complaints in Manhattan increased 20% over the last quarter, primarily related to construction permits.
 
 Without automation, analysts must manually download and process raw data from the 311 database, leading to delayed reporting, inconsistent metrics, and poor visibility to trends. The goal is to build a reliable end-to-end data pipeline that turns raw NYC 311 service request data into meaningful, analytics-ready insights.
-
-
-
+  
+  
+  
+  
+  
 ## Step by Step Overview
 1. Extract data from NYC service requests 2020-present data set obtained through NYC Open Data: https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data
 2.  Store the raw data into a data lake, Google Cloud Storage. The extracted 311 records are written as parquet files and uploaded to a dedicated Google Cloud Storage bucket. Files are organized by ingestion date to support incremental loads, maintain historical snapshots, and ensure scalable, cost-effective storage of raw data in its original form.
