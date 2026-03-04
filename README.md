@@ -4,16 +4,16 @@
 * [Problem Statement](#problem-statement)
 * [Overview](#step-by-step-overview)
 * [Technologies used](#technologies)
-* [Cloud](#cloud-platform)
-  * [Infrastructure as Code](#Infrastructure-as-code)
-  * [Orchestration](#orchestration)
+* [Cloud](#☁️cloud-platform)
+  * [Infrastructure as Code](#🏗Infrastructure-as-code)
+  * [Orchestration](#🔄orchestration)
 * [Data Pipeline](#data-pipeline)
-  * [Data Ingestion batch](#data-ingestion-batch)
-  * [Data Lake GCS](#data-lake)
-  * [Data Warehouse BigQuery](#data-warehouse)
-  * [Transformations](#data-transformation)
-* [Dashboard](#dashboard-visualization)
-* [Instructions for running pipeline](#how-to-set-up-and-run-the-pipeline-with-docker)
+  * [Data Ingestion batch](#📥data-ingestion-batch)
+  * [Data Lake GCS](#🗄data-lake)
+  * [Data Warehouse BigQuery](#🏢data-warehouse)
+  * [Transformations](#🧮data-transformation)
+* [Dashboard](#📊dashboard-visualization)
+* [Instructions for running pipeline](#🐳how-to-set-up-and-run-the-pipeline-with-docker)
 
 
 
@@ -101,5 +101,5 @@ tile 2 - temporal; line chart showing trends over time; ex: number of complaints
 
 
 
-## How to set up and run the pipeline with docker
+## 🐳 How to set up and run the pipeline with docker
 uses docker (containerization) to ensure reproducible local development environment.
