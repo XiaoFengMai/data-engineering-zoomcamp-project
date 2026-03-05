@@ -7,7 +7,7 @@
 * [Cloud](#cloud-platform)
   * [Infrastructure as Code](#Infrastructure-as-code)
   * [Orchestration](#orchestration)
-* [Data Pipeline](#data-pipeline)
+* [Data Pipeline](#data-pipeline-architecture-diagram)
   * [Data Ingestion batch](#data-ingestion-batch)
   * [Data Lake GCS](#🗄data-lake)
   * [Data Warehouse BigQuery](#data-warehouse)
@@ -42,15 +42,15 @@ Without automation, analysts must manually download and process raw data from th
 
 
 ## Technologies
-google cloud platform (GCP) as the primary cloud provider
-terraform 
-dlt  
-prefect flow  
-google cloud storage (GCS)  
-big query  
-data build tool (dbt)  
-looker studio  
-docker
+Google Cloud Platform (GCP)
+Terraform 
+Data Load Tool (dlt)  
+Prefect  
+Google Cloud Storage (GCS)  
+BigQuery  
+Data Build Tool (dbt)  
+Looker Studio  
+Docker
 
 GIT  
 gcloud CLI  
@@ -74,7 +74,9 @@ prefect automates and schdules the extract, load, transform workflow.
 
 
 
-## Data pipeline
+## Data pipeline architecture diagram
+<img width="698" height="1516" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/3c8146a3-87c2-4966-8460-7b68785c0b4f" />
+
 
 ### Data Ingestion batch
 data load tool (dlt) extracts data from the NYC 311 API and loads it into cloud storage and BigQuery, using python as the core scripting language
