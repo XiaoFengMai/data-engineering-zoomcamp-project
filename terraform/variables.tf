@@ -9,11 +9,11 @@ variable "region" {                #defines a variable named region
 }
 
 variable "gcs_bucket_name" {              #defines a variable named gcs_bucket_name
-  description = "Name of the GCS data lake bucket"       # replace this with your unique bucket name 
+  description = "nyc-311-gcs-data-lake"       # replace this with your unique bucket name 
   type        = string
 }
 
 variable "bigquery_dataset_name" {             # defines a variable named bigquery_dataset_name
-  description = "BigQuery dataset name"        # replace this with your unique bigquery dataset name
+  description = "nyc_311_bigquery_dataset"        # replace this with your unique bigquery dataset name
   type        = string
 }
