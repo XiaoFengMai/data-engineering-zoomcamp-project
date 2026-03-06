@@ -1,4 +1,4 @@
-# create data lake bucket in google cloud storage
+# create resources (google cloud storage bucket, bigquery dataset, etc)
 
 resource "google_storage_bucket" "data_lake_bucket" {
   name          = var.gcs_bucket_name
