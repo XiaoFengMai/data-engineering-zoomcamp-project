@@ -3,11 +3,11 @@ import subprocess
 
 @task
 def run_dlt_pipeline():
-  subprocess.run(["python", "ingestion pipeline/nyc_311_pipeline.py"], check=True)
+  subprocess.run(["python", "ingestion_pipeline/nyc_311_pipeline.py"], check=True)
 
 @task
 def run_dbt():
-    subprocess.run(["dbt", "run"], cwd="data build tool/nyc_311_project")
+    subprocess.run(["dbt", "run"], cwd="data_build_tool/nyc_311_project")
 
 @flow
 def nyc_pipeline():
