@@ -7,9 +7,9 @@ models:
     description: Cleaned staging model for NYC 311 service requests
     columns:
       - name: unique_key
-      tests:
-        - not_null
-        - unique
+        tests:
+          - not_null
+          - unique
 
   - name: complaints_by_type
     description: aggregated complaints by type
