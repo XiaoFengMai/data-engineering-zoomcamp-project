@@ -1,7 +1,8 @@
 name: nyc_311_project
 version: 1.0
+config-version: 2
 
-profile: nyc_311_profile
+profile: 'nyc_311_profile'
 
 model-paths: ["models"]
 
