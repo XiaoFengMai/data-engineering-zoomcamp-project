@@ -3,7 +3,7 @@ import subprocess
 
 @task
 def run_dlt_pipeline():
-  subprocess.run(["python", "pipelines/nyc_311_pipeline.py"], check=True)
+  subprocess.run(["python", "ingestion pipeline/nyc_311_pipeline.py"], check=True)
 
 @flow(name="nyc_311_batch_pipeline")
 def nyc_311_flow():
