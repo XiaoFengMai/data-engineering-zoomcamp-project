@@ -5,11 +5,13 @@ import subprocess
 def run_dlt_pipeline():
   subprocess.run(["python", "ingestion pipeline/nyc_311_pipeline.py"], check=True)
 
-@flow(name="nyc_311_batch_pipeline")
-def nyc_311_flow():
+@task
+def run_dbt():
+    subprocess.run(["dbt", "run"], cwd="data build tool/nyc_311_project")
 
-  run_dlt_pipeline()
+@flow
+def nyc_pipeline():
+    run_ingestion()
+    run_dbt()
 
-
-if __name__ == "__main__":
-  nyc_311_flow()
+nyc_pipeline()
