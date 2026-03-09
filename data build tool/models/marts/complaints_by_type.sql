@@ -1,4 +1,4 @@
-# this sql query is used to power looker dashboard charts
+# this query filters complaint types displayed within looker dashboard charts
 SELECT
     complaint_type,
     COUNT(*) AS total_requests
