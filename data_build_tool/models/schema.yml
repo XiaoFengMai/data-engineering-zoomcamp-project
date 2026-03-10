@@ -1,20 +1,20 @@
 # the tests below validate data quality automatically when running data build tool test
 
-version: 2
+version: 2            # defines the schema format version used by dbt
 
-models:
+models:              # starts the list of models to document and test
 
-  - name: int_311_cleaned
-    description: Cleaned dataset of NYC 311 service requests used for analytics.
+  - name: int_311_cleaned          # refers to the intermediate model
+    description: Cleaned dataset of NYC 311 service requests used for analytics.      # for dbt documentation pages
 
-    columns:
-      - name: unique_key
-        description: Unique identifier for each service request
+    columns:              # defines column metadata 
+      - name: unique_key          # refers to the column in model
+        description: Unique identifier for each service request  
         tests:
-          - unique
-          - not_null
+          - unique      # ensure no duplicates
+          - not_null    # ensures that every requests has an ID
 
-      - name: borough
+      - name: borough        # documents aggregated models and provides description for each
         description: Borough where the complaint originated
 
       - name: complaint_type
@@ -30,4 +30,5 @@ models:
     description: Daily count of complaints to analyze seasonal trends.
 
 
-# run dbt docs; generate dbt docs serve in project to generate an interactive documentation site showing model lineage, dependencies, column descriptions, data tests.
+# run dbt docs in project to generate a documentatiion site that reads schema.yml, SQL models, and build a documentation website
+# run dbt docs serve in project to generate an interactive documentation site showing model lineage, column descriptions, and dependencies between tables
