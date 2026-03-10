@@ -7,4 +7,4 @@ SELECT
 FROM {{ ref('stg_311_requests') }}            # ref is a dbt function for referening another model in your project, in this case
                                                 # it references the staging model, stg_311 requests, using ref builds model in right order
 GROUP BY borough                        # groups all rows by borough value so the count(*) is calculated per borough
-ORDER BY total_requests DESC                # sorts results from highest to lowest request count, so the busiest borough appears first
+ORDER BY total_requests DESC                # sorts results from highest -> lowest request count, so the busiest borough appears first
