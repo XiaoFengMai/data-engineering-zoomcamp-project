@@ -1,4 +1,4 @@
-# this model answers, for each borough, how many complaints of each complaint type were filed?
+# this model shows how many complaints were filed for each uinque complaint type in the boroughs 
 
 SELECT                # initiates query
     borough,                   # selects borough column
