@@ -1,7 +1,9 @@
-  # install with data build tool dependencies
+# download dbt_utils version 1.1.1 when setting up the dbt project
 
-packages:
-  - package: dbt-labs/dbt_utils
-    version: 1.1.1
+packages:          # declares what packages to install
+  - package: dbt-labs/dbt_utils            # the most popular dbt package that provides reusable macros for common sql patterns, format is organization/package_name
+    version: 1.1.1                  # pins the package to an exact version, ensuring reproducibility
 
-
+# after running dpt deps (the install commnand), you can reference macros from this package in your dbt models such as
+# {{ dbt_utils.generate_surrogate_key(['order_id', 'customer_id']) }}
+# concatenates (combines) order_id and customer_id values and hases them into a single unique indentifier
