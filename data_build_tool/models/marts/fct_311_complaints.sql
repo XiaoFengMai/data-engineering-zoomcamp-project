@@ -1,6 +1,10 @@
-SELECT
-    borough,
-    complaint_type,
-    COUNT(*) AS complaint_count
-FROM {{ ref('stg_311_requests') }}
-GROUP BY borough, complaint_type
+# this model answers, for each borough, how many complaints of each complaint type were filed?
+
+SELECT                # initiates query
+    borough,                   # selects borough column
+    complaint_type,                # selects complaint category 
+    COUNT(*) AS complaint_count                # counts every row that has borough and complaints data and labels it complaint_count (*) -> regardless of null values
+FROM {{ ref('stg_311_requests') }}        # pulls data from stg_311_requests staging model using dbt's ref() function
+GROUP BY borough, complaint_type               # creates a row for every unique combinaition of borough and complaint type 
+
+# 
